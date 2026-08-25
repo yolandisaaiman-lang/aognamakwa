@@ -1,0 +1,1 @@
+create type public.ministry_role as enum ('church_administrator', 'pastoral_leader', 'area_leader', 'youth', 'transport', 'usher_leader', 'finance', 'worship_team', 'media_sound', 'hospital_ministry');

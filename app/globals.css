@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import "tailwindcss";
+
+:root{--ink:#171515;--paper:#f8f7f5;--line:#e1dfdb;--muted:#807b76;--orange:#ec9200;--deep:#12110f}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif}
+button,input,select{font-family:inherit}
+.shell{max-width:1160px;margin:auto}
+.nav{height:92px;display:flex;align-items:center;justify-content:space-between}
+.brand{border:0;background:transparent;letter-spacing:5px;font-size:13px;font-weight:700;color:var(--ink);cursor:pointer}
+.brand em{color:var(--orange);font-style:normal}
+.nav-links{display:flex;gap:32px;margin-left:135px}
+.nav-links a,.hero-actions a{font-size:13px;text-decoration:none;color:#6f6963}
+.sign-in{border:1px solid #c9c5c0;border-radius:30px;padding:11px 17px;background:transparent;font:500 13px Manrope;cursor:pointer}
+.sign-in span{font-size:16px;margin-left:8px}
+.hero{min-height:630px;display:flex;align-items:center;gap:100px;padding:70px 12px 80px}
+.hero-copy{width:490px}
+.eyebrow{font:500 11px 'DM Mono',monospace;letter-spacing:3px;color:#b35b00;margin:0 0 20px}
+.hero h1{font:400 57px/1.06 'Playfair Display',serif;margin:0;letter-spacing:-1px}
+.hero h1 i,.purpose i,.login-modal h2 i,.dash-intro h1 i{font-weight:400;color:var(--orange)}
+.hero-text{font-size:15px;line-height:1.75;color:#706a64;width:415px;margin:25px 0 30px}
+.hero-actions{display:flex;align-items:center;gap:22px}
+.primary{border:0;border-radius:40px;background:var(--orange);padding:15px 23px;color:#17120b;font:600 13px Manrope;cursor:pointer;transition:.2s}
+.primary:hover{background:#ffad23;transform:translateY(-1px)}
+.primary:disabled{opacity:.65;cursor:not-allowed;transform:none}
+.primary b{font-size:18px;margin-left:15px}
+.ministry-panel{position:relative;overflow:hidden;width:445px;border:1px solid #403d39;border-radius:8px;padding:35px 32px;color:#dedbd6;background:#1b1917;box-shadow:0 25px 60px #1b150f15}
+.panel-glow{position:absolute;right:-70px;top:-90px;width:230px;height:230px;border-radius:50%;background:#b35b0017;filter:blur(25px)}
+.panel-label{position:relative;font:11px 'DM Mono';letter-spacing:2.5px;color:#8d8883;margin:0 0 16px}
+.area-chips{position:relative;display:flex;flex-wrap:wrap;gap:9px}
+.area-chips span{padding:8px 15px;border:1px solid #514d48;border-radius:22px;font-size:13px}
+.panel-rule{height:1px;background:#393632;margin:31px 0}
+.portal-list{position:relative;display:flex;flex-direction:column;gap:14px;font-size:14px;color:#c5c0ba}
+.portal-list span:before{content:'>';color:var(--orange);margin-right:11px}
+.panel-footer{position:relative;margin-top:31px;padding-top:19px;border-top:1px solid #393632;font-size:12px;color:#aaa49e}
+.live-dot{display:inline-block;width:7px;height:7px;background:#d6901a;border-radius:50%;margin:0 8px 1px 0}
+.purpose{background:var(--deep);color:#f4f0e9}
+.purpose-inner{min-height:240px;display:flex;position:relative;align-items:center}
+.purpose .eyebrow{position:absolute;top:47px;color:#d88612}
+.purpose-inner>p:not(.eyebrow){font:400 31px/1.3 'Playfair Display';max-width:670px;margin:30px 0 0}
+.purpose-count{margin-left:auto;display:flex;align-items:center;gap:12px}
+.purpose-count strong{font:400 60px 'Playfair Display';color:var(--orange)}
+.purpose-count span{font-size:11px;line-height:1.5;color:#aaa39a;text-transform:uppercase;letter-spacing:1px}
+.ministries{padding:105px 0}
+.section-heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:38px}
+.section-heading h2,.areas h2{font:400 43px 'Playfair Display';letter-spacing:-1px;margin:0}
+.section-heading>p{width:350px;color:#756f69;font-size:13px;line-height:1.7;margin:0}
+.role-grid{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-right:0}
+.role-card{min-height:250px;text-align:left;position:relative;padding:21px 18px;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fbfaf8;cursor:pointer;transition:.2s}
+.role-card:nth-child(n+6){border-bottom:0}
+.role-card:hover{background:#1b1917;color:#fff;transform:scale(1.02);z-index:1;box-shadow:0 12px 30px #1a171413}
+.role-number{font:10px 'DM Mono';color:#b4afa8}
+.role-icon{display:block;font:28px 'Playfair Display';color:var(--orange);margin:26px 0 14px}
+.role-card h3{font-size:14px;margin:0 0 9px}
+.role-card p{font-size:11px;line-height:1.55;color:#89837d;margin:0}
+.role-card>div{position:absolute;bottom:17px;left:18px;right:18px;display:flex;justify-content:space-between;align-items:center}
+.role-card small{font-size:10px;color:#b35b00}
+.role-card b{font-size:18px;color:var(--orange)}
+.areas{padding:90px 0 100px;border-top:1px solid var(--line)}
+.areas h2{margin-bottom:38px}
+.area-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.area-grid article{position:relative;min-height:160px;padding:18px;background:#edeae6}
+.area-grid article>span{font:10px 'DM Mono';color:#a69f97}
+.area-grid h3{font:500 21px 'Playfair Display';margin:34px 0 5px}
+.area-grid p{font-size:10px;color:#8d867f;margin:0}
+.area-grid b{position:absolute;right:16px;top:16px;color:var(--orange)}
+footer{height:97px;display:flex;align-items:center;gap:32px;border-top:1px solid var(--line)}
+footer span{font-size:11px;color:#8d8780;flex:1}
+footer>button:last-child{border:0;background:transparent;font:12px Manrope;color:#a15000;cursor:pointer}
+.modal-wrap{position:fixed;z-index:10;inset:0;display:grid;place-items:center;background:#11100eaa;backdrop-filter:blur(5px);padding:20px}
+.login-modal{position:relative;width:min(480px,100%);background:#f9f7f3;padding:48px;border-radius:4px;box-shadow:0 30px 90px #0007}
+.close{position:absolute;right:18px;top:13px;border:0;background:transparent;font:30px 'Playfair Display';cursor:pointer}
+.auth-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:28px;padding:4px;background:#eeeae4}
+.auth-tabs button{border:0;background:transparent;padding:10px;font:700 11px Manrope;color:#786f66;cursor:pointer}
+.auth-tabs button.active{background:#1b1917;color:#fff}
+.login-modal h2{font:400 37px/1.15 'Playfair Display';letter-spacing:-1px;margin:0 0 34px}
+.login-modal label{display:block;color:#59534d;font-size:11px;margin:15px 0}
+.login-modal input,.login-modal select{display:block;width:100%;margin-top:7px;padding:13px;border:1px solid #d8d4ce;background:white;font:13px Manrope;color:#393530}
+.form-error,.form-message{font-size:11px;line-height:1.5;margin:13px 0 0}
+.form-error{color:#b42318}
+.form-message{color:#207245}
+.wide{width:100%;margin-top:18px}
+.login-help{text-align:center;color:#8c857d;font-size:11px;margin:21px 0 0}
+.dashboard{min-height:100vh;background:#f7f6f3}
+.dash-nav{height:69px;display:flex;align-items:center;padding:0 5%;border-bottom:1px solid var(--line);background:#fcfbf9}
+.dash-tabs{display:flex;gap:27px;margin-left:100px;font-size:12px;color:#8d867f}
+.dash-tabs span{cursor:pointer}
+.dash-tabs .active{color:#191715;font-weight:700}
+.profile{margin-left:auto;border:0;background:transparent;font:12px Manrope;display:flex;align-items:center;gap:8px;cursor:pointer}
+.profile i{font-style:normal;background:var(--orange);border-radius:50%;padding:6px 10px;color:#22180b}
+.dash-body{max-width:1160px;margin:auto;padding:55px 0}
+.dash-intro{display:flex;justify-content:space-between;align-items:end}
+.dash-intro h1{font:400 43px 'Playfair Display';letter-spacing:-1px;margin:0}
+.dash-intro>div>p:last-child{font-size:13px;color:#877f78}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:38px 0}
+.stat{padding:22px;background:#fff;border:1px solid var(--line);border-radius:4px}
+.stat p{font:10px 'DM Mono';letter-spacing:1.4px;color:#918a82;text-transform:uppercase;margin:0 0 15px}
+.stat strong{display:block;font:400 30px 'Playfair Display';margin-bottom:5px}
+.stat span{font-size:11px;color:#b5680b}
+.dash-columns{display:grid;grid-template-columns:1.8fr .9fr;gap:17px}
+.report-card,.next-card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:28px}
+.card-top{display:flex;justify-content:space-between;align-items:start}
+.card-top h2{font:400 25px 'Playfair Display';margin:0}
+.card-top button{border:0;background:transparent;font:12px Manrope;color:#ad5800}
+.activity{margin-top:18px;border-top:1px solid var(--line)}
+.activity>div{display:flex;align-items:center;gap:13px;padding:15px 0;border-bottom:1px solid var(--line)}
+.activity i{font-style:normal;width:27px;height:27px;border-radius:50%;display:grid;place-items:center;font-size:9px;font-weight:800}
+.orange{background:#fff0d9;color:#c57300}
+.blue{background:#e6f0f1;color:#3c6d73}
+.green{background:#ebf2e7;color:#5f8760}
+.activity p{margin:0;flex:1;font-size:12px}
+.activity p b{display:block}
+.activity p span{display:block;font-size:10px;color:#8f8881;margin-top:3px}
+.activity time{font:10px 'DM Mono';color:#9b938a}
+.next-card{background:#1b1917;color:#f7f4ee}
+.next-card .eyebrow{color:#d88918}
+.next-card h3{font:400 26px 'Playfair Display';margin:17px 0 4px}
+.next-card>p:not(.eyebrow){font-size:12px;color:#bcb5ad}
+.next-line{height:1px;background:#403d38;margin:36px 0 16px}
+.next-card span{font-size:11px;color:#beb6af}
+.next-card button{display:block;border:0;background:transparent;color:var(--orange);font:12px Manrope;margin-top:35px;padding:0}
+.activity-item{position:relative;display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.activity-item:last-child{border-bottom:0}
+.activity-meta{display:flex;align-items:center;gap:8px;margin-top:5px}
+.area-badge{font:500 10px 'DM Mono',monospace;background:#eeeae4;color:#615a53;padding:2px 8px;border-radius:12px;text-transform:uppercase}
+.metric-tag{font-size:11px;color:#877f77}
+.notes-preview{font-size:11px;color:#68625c;margin-top:6px;font-style:italic;background:#fcfbf9;padding:6px 10px;border-left:2px solid var(--orange);border-radius:2px}
+.delete-report-btn{border:0;background:transparent;color:#b42318;font-size:14px;cursor:pointer;padding:4px 8px;margin-left:auto;opacity:.5;transition:.2s}
+.delete-report-btn:hover{opacity:1;background:#fef3f2;border-radius:4px}
+
+.empty-state{text-align:center;padding:45px 20px;background:#fcfbf9;border:1px dashed #d8d3cc;border-radius:4px;margin-top:18px}
+.empty-state p{font-size:13px;color:#78726a;margin:8px 0 16px}
+.empty-state-icon{font-size:32px;color:var(--orange)}
+
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-full{grid-column:1/-1}
+
+.reports-list-tab{background:#fff;border:1px solid var(--line);border-radius:4px;padding:28px}
+.filter-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}
+.filter-bar input,.filter-bar select{padding:10px 14px;border:1px solid #d8d4ce;border-radius:4px;font:13px Manrope;background:#fff}
+.filter-bar input{flex:1;max-width:320px}
+
+.reports-table{width:100%;border-collapse:collapse;margin-top:12px;font-size:13px}
+.reports-table th{text-align:left;padding:12px 14px;border-bottom:2px solid var(--line);font:600 11px 'DM Mono',monospace;color:#7c766f;text-transform:uppercase}
+.reports-table td{padding:14px;border-bottom:1px solid var(--line);color:#332f2b;vertical-align:top}
+.reports-table tr:hover td{background:#faf8f5}
+
+.calendar-grid,.members-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:20px}
+.calendar-card,.member-card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px}
+.calendar-card h3,.member-card h3{font:400 20px 'Playfair Display';margin:0 0 6px}
+.calendar-card p,.member-card p{font-size:12px;color:#7c756e;margin:4px 0}
+
+@media(max-width:800px){.shell{padding-left:22px;padding-right:22px}.nav{height:72px}.nav-links{display:none}.hero{min-height:auto;display:block;padding:80px 22px 70px}.hero-copy{width:auto}.hero h1{font-size:45px}.hero-text{width:auto}.ministry-panel{width:100%;margin-top:55px}.purpose-inner{padding-top:60px;padding-bottom:30px;min-height:220px;display:block}.purpose-count{margin-top:18px}.section-heading{display:block}.section-heading>p{width:auto;margin-top:18px}.ministries{padding:70px 0}.role-grid{grid-template-columns:repeat(2,1fr)}.role-card:nth-child(n){border-bottom:1px solid var(--line)}.role-card:last-child{border-bottom:0}.area-grid{grid-template-columns:repeat(2,1fr)}.dash-tabs{display:none}.dash-body{padding:35px 20px}.dash-intro{align-items:start}.dash-intro .primary{display:none}.dash-intro h1{font-size:34px}.stats{grid-template-columns:repeat(2,1fr)}.dash-columns{grid-template-columns:1fr}.profile span{display:none}footer{padding-left:22px;padding-right:22px}footer span{display:none}.mobile-break{display:block}.form-grid{grid-template-columns:1fr}}
