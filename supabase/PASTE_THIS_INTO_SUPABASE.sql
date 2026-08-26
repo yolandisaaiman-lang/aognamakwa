@@ -3,7 +3,7 @@
 
 -- 1. Create Ministry Role Enum (ignore error if already exists)
 do $$ begin
-  create type public.ministry_role as enum ('church_administrator', 'pastoral_leader', 'area_leader', 'youth', 'transport', 'usher_leader', 'finance', 'worship_team', 'media_sound', 'hospital_ministry');
+  create type public.ministry_role as enum ('church_administrator', 'pastoral_leader', 'area_leader', 'youth', 'transport', 'usher_leader', 'media_sound', 'hospital_ministry');
 exception
   when duplicate_object then null;
 end $$;

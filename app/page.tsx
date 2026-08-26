@@ -9,8 +9,6 @@ const roles = [
   { name: "Youth", short: "Youth", icon: "Y", text: "Friday youth services, activities and attendance.", scope: "Youth ministry" },
   { name: "Transport", short: "Transport", icon: "T", text: "Sunday routes, taxi bookings, fares and fuel records.", scope: "Transport" },
   { name: "Usher Leader", short: "Ushers", icon: "U", text: "Sunday teams, service duties, attendance and vehicles.", scope: "Ushering" },
-  { name: "Finance", short: "Finance", icon: "R", text: "Offerings, expenses and ministry financial summaries.", scope: "Finance" },
-  { name: "Worship Team", short: "Worship", icon: "W", text: "Schedules, set lists and musician coordination.", scope: "Worship" },
   { name: "Media & Sound", short: "Media", icon: "M", text: "Service production, equipment and media schedules.", scope: "Media & sound" },
   { name: "Hospital Ministry", short: "Hospital", icon: "H", text: "Hospital visits, care notes and prayer follow-up.", scope: "Hospital care" },
 ];
@@ -66,7 +64,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="purpose"><div className="shell purpose-inner"><p className="eyebrow">OUR PURPOSE</p><p>Making the work of the church <i>visible, shared</i> and beautifully simple.</p><div className="purpose-count"><strong>10</strong><span>ministry<br />portals</span></div></div></section>
+      <section id="about" className="purpose"><div className="shell purpose-inner"><p className="eyebrow">OUR PURPOSE</p><p>Making the work of the church <i>visible, shared</i> and beautifully simple.</p><div className="purpose-count"><strong>8</strong><span>ministry<br />portals</span></div></div></section>
 
       <section id="ministries" className="ministries shell">
         <div className="section-heading"><div><p className="eyebrow">ONE HOME, MANY HANDS</p><h2>Ministry portals</h2></div><p>Each team gets the tools and information they need, with clear access and a shared view for leadership.</p></div>

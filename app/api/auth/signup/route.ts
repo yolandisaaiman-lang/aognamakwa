@@ -10,8 +10,6 @@ const validRoles = new Set([
   "youth",
   "transport",
   "usher_leader",
-  "finance",
-  "worship_team",
   "media_sound",
   "hospital_ministry",
 ]);
