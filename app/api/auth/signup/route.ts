@@ -12,6 +12,7 @@ const validRoles = new Set([
   "usher_leader",
   "media_sound",
   "hospital_ministry",
+  "church_maintenance",
 ]);
 
 const validAreas = new Set(["Nababeep", "Concordia", "Okiep", "Springbok", "Aggeneys"]);

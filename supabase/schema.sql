@@ -8,7 +8,7 @@ create extension if not exists pgcrypto;
 -- CREATE TYPE IF NOT EXISTS.)
 create type public.ministry_role as enum (
   'church_administrator', 'pastoral_leader', 'area_leader', 'youth',
-  'transport', 'usher_leader', 'media_sound', 'hospital_ministry'
+  'transport', 'usher_leader', 'media_sound', 'hospital_ministry', 'church_maintenance'
 );
 
 -- Every signed-in person receives one role and, where appropriate, one assigned area.
